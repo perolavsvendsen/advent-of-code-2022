@@ -59,40 +59,17 @@ def play_part2(fin):
     return round_scores, total_score
 
 
-def test_part1():
-
-    fin = "2_tests.txt"
-    round_scores, total_score = play(fin)
-
-    assert round_scores == [8, 1, 6]
-    assert total_score == 15
-
-    print("Part 1: ✅")
-
-
-def test_part2():
-    fin = "2_tests.txt"
-
-    round_scores, total_scores = play_part2(fin)
-
-    assert round_scores == [4, 1, 7]
-    assert total_scores == 12
-
-    print("Part 2: ✅")
-
 
 def main():
-    fin = "2a.txt"
+    fin = "input/2.txt"
 
     round_scores, total_score = play(fin)
 
-    print(f"Total score, part 1: {total_score}")
+    print(f"Day 2, part 1: {total_score}")
 
     round_scores, total_score = play_part2(fin)
-    print(f"Total score, part 2: {total_score}")
+    print(f"Day 2, part 2: {total_score}")
 
 
 if __name__ == "__main__":
-    test_part1()
-    test_part2()
     main()
