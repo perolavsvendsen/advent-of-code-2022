@@ -41,15 +41,6 @@ def _move(stacks, instruction, crane_version):
     
     raise ValueError("Unknown crane version %s", crane_version)
 
-
-def _move_9001(stacks, instruction):
-    """Take the stacks, do the move, return the updated stacks"""
-
-    amount, source, target = _parse_instruction(instruction)
-
-
-    return stacks
-
 def _parse_instruction(instruction):
     """move 1 from 2 to 3 -> (1, 2, 3)"""
     result = re.findall(r"\d+", instruction)
